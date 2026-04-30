@@ -383,6 +383,43 @@ strong { font-weight: 600; color: var(--navy); }
 .comms-cell p { font-size: 14.5px; line-height: 1.65; }
 .comms-cell a { font-weight: 500; border-bottom: 1px solid rgba(125,92,59,0.3); padding-bottom: 1px; }
 
+/* Inline anchor link inside comms cell */
+.comms-cell .anchor-link {
+  display: inline-block;
+  margin-top: 12px;
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--copper);
+  border-bottom: 1px solid var(--copper);
+  padding-bottom: 2px;
+}
+.comms-cell .anchor-link:hover {
+  color: var(--navy);
+  border-bottom-color: var(--navy);
+}
+
+/* ====== CALENDAR SECTION ====== */
+.calendar-wrapper {
+  background: #FDFBF7;
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  padding: 12px;
+  margin-top: 40px;
+  overflow: hidden;
+}
+.calendar-wrapper iframe {
+  width: 100%;
+  min-height: 720px;
+  border: none;
+  display: block;
+}
+@media (max-width: 720px) {
+  .calendar-wrapper iframe { min-height: 900px; }
+}
+
 /* ====== HOLIDAY BLOCKS ====== */
 .holiday-alert {
   background: var(--navy);
@@ -730,20 +767,11 @@ footer .copyright {
       </div>
 
       <div class="comms-cell">
-       <div class="comms-cell">
-  <div class="meta">Strategy and Deep Work</div>
-  <h3>Scheduled calls with Veronica</h3>
-  <p>For strategic conversations, quarterly partnership meetings, and anything requiring focused thinking. Booked through your dedicated scheduling link.</p>
-
-  <div class="calendar-embed">
-    <iframe 
-      src="https://the.veronicadietz.com/widget/booking/14DoqJaTfU6zIEoSeBb9" 
-      style="width: 100%; border: none; overflow: hidden;" 
-      scrolling="no" 
-      id="Y4CIzuHYjFLxMdQvRPKp_1777577433319">
-    </iframe>
-  </div>
-</div>
+        <div class="meta">Strategy and Deep Work</div>
+        <h3>Scheduled calls with Veronica</h3>
+        <p>For strategic conversations, quarterly partnership meetings, and anything requiring focused thinking. Booked through the calendar below.</p>
+        <a href="#book-a-call" class="anchor-link">Book a call &rarr;</a>
+      </div>
 
       <div class="comms-cell">
         <div class="meta">Invoicing and Payment</div>
@@ -772,8 +800,27 @@ footer .copyright {
   </div>
 </section>
 
+<!-- ====== BOOK A CALL (CALENDAR) ====== -->
+<section id="book-a-call" class="section-alt">
+  <div class="container-narrow">
+    <div class="section-intro">
+      <div class="eyebrow">Book A Call</div>
+      <h2 class="section-title">Schedule time <span class="serif-italic">with Veronica.</span></h2>
+      <p class="lead">For strategic conversations, quarterly partnership meetings, and anything requiring focused thinking. Pick a time that works and you'll receive a confirmation with the meeting link.</p>
+    </div>
+
+    <div class="calendar-wrapper">
+      <iframe
+        src="https://the.veronicadietz.com/widget/booking/14DoqJaTfU6zIEoSeBb9"
+        scrolling="no"
+        id="Y4CIzuHYjFLxMdQvRPKp_1777577433319">
+      </iframe>
+    </div>
+  </div>
+</section>
+
 <!-- ====== HOLIDAY SCHEDULE ====== -->
-<section class="section-alt">
+<section>
   <div class="container-narrow">
     <div class="section-intro">
       <div class="eyebrow">2026 Holiday Schedule</div>
@@ -813,7 +860,7 @@ footer .copyright {
 </section>
 
 <!-- ====== REFERRAL ====== -->
-<section>
+<section class="section-alt">
   <div class="container">
     <div class="referral-card">
       <div class="eyebrow">Referral Program</div>
@@ -827,7 +874,7 @@ footer .copyright {
 </section>
 
 <!-- ====== CLOSING ====== -->
-<section class="section-alt">
+<section>
   <div class="container-narrow" style="text-align: center;">
     <div class="ornament">
       <span class="ornament-dot"></span>
@@ -853,6 +900,9 @@ footer .copyright {
     <div class="copyright">&copy; 2026 Tyche Digital Agency. All rights reserved.</div>
   </div>
 </footer>
+
+<!-- GHL form embed script -->
+<script src="https://the.veronicadietz.com/js/form_embed.js" type="text/javascript"></script>
 
 </body>
 </html>
